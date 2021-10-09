@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +8,27 @@
 </head>
 <body>
     <!-- 
-        变量：可以改变的量
-        常量：不可以改变的量
-
-        变量的使用：
-            1、定义变量
-                先定义后使用，变量的初始化（var和不写的区别）
-                变量的本质：内存结构图
-            2、变量的命名规范
-                大驼峰
-                小驼峰
-                下划线
-            3、关键字和保留字
-                关键字：
-                保留字：
+        字面量：都是一些不可改变的值
+            比如：1   2   3   4
+            字面量都是可以使用的，但是一般不会直接使用字面量
+            
+        变量：变量可以用来保存字面量
+            变量会更加方便使用
+            在开发中会使用变量保存一个字面量，不会直接使用字面量
+            可以通过变量对字面量进行描述
+            x=12345678
      -->
-     <script>
-         const testText="Hello World";
-         console.log(testText);
-         document.write(testText);
-         alert(testText);
+     <script type="text/javascript">
+        // 变量的声明
+        var x;
+        // 变量赋值
+        x=654321
+        // 变量和赋值同时进行
+        var a=555;
+
+        alert(x);
+        document.write(a);
+        console.log(x);
      </script>
 </body>
 </html>
