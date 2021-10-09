@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            js中表示进制数字：
+                16进制的数字，则需要 0x 做开头
+                8进制的数字，则需要 0 开头
+                2进制的数字，则需要 0b 开头
+
+        */
+      var a;
+
+      a = 015;
+      console.log(a);
+
+      a = 0xff;
+      console.log(a);
+
+      a = 0b111;
+      console.log(a);
+
+      /*
+            这种'070'的字符串，转为Number时，有些浏览器会当成八进制，有些当成十进制
+            解决方法：
+                在parseInt()穿第一个第二参数，指定数字的进制
+      */
+      a = "070";
+      a = parseInt(a, 10);
+      console.log(a);
+      console.log(typeof a);
+    </script>
+  </body>
+</html>
