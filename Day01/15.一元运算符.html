@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            一元运算符
+                只需要一个操作数
+
+                +   正号
+                    正号不会对数据产生任何影响
+                -   负号
+                    负号会对数字进行负号的取反
+                
+                对于非Number类型的值
+                    先转为Number，在运算
+                    可以对一个其他类型的数据类型使用 加号 将其转换成number
+                    他的原理和Number()函数一样
+
+
+        */
+      var a = 123;
+      a = -a;
+      console.log(a);
+
+      //将其转换成Number，在进行运算
+      a = true;
+      a = -a;
+      console.log(a);
+
+      a = "123";
+      a = +a;
+      console.log(a);
+
+      //将此转换特性应用到加法运算
+      a = 1 + +"2" + 3;
+      console.log(a);
+    </script>
+  </body>
+</html>

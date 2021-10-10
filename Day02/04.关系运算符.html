@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            通过关系运算符可以比较两个值之间的大小关系
+                如果关系成立他会返回true，如果不成立则返回false
+
+            >   大于号
+                - 判断符号左侧的值是否大于右侧的值
+                - 如果关系成立，返回true，如果关系不成立则返回false
+            >=   大于等于
+                - 判断符号左侧的值是否大于或等于右侧的值
+            <   小于号
+                - 判断符号左侧的值是否小于右侧的值
+            <=  大于号
+                - 判断符号左侧的值是否小于等于右侧的值
+
+            非布尔值情况
+                - 对于非数值进行比较时，会将其转换成数字再进行比较
+                - 如果符号两侧的值都是字符串时，不会将其转换成数字进行比较
+                    会分别比较字符串中的字符编码
+                    比较字符编码时，只比较第一位，
+                    如果两位一样则比较下一位
+                    'abcd' > 'b'
+                    'abc' < 'bcd'
+
+            如果比较两个数字类型的字符串，可能会得到不可预期的结果
+                注意：
+                    在比较两个数字型的字符串时，一定要转型。
+                    console.log('100'>+'5') //true
+        */
+      var a = "abv" > "cbb";
+      console.log(a);
+      var a = +"5";
+      console.log(typeof a);
+      console.log('100' > +'5') 
+    </script>
+  </body>
+</html>
