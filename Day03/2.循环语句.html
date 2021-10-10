@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        /*
+      /*
             while循环
                 语句：
                     while（条件表达式）{
@@ -19,11 +19,43 @@
                         如果值为true，则执行循环体
                             执行完毕后，再次判断表达式，如果为true继续执行
                         如果值为false，则终止循环
+                break 可以终止循环
         */
-        var n=1
-        while(false){
-            console.log(n++)
-        }
+      var n = 1;
+      while (false) {
+        console.log(n++);
+      }
+
+      /*
+            创建循环，需要三个步骤
+            1、初始化一个变量
+            2、在循环中设置一个条件表达式
+            3、顶一个更新表达式，每次更新初始化变量
+        */
+      var i = 0;
+      while (i < 10) {
+        i++;
+        console.log(i);
+      }
+
+      /*
+            do...while循环
+                语法：
+                    do{语句}while(表达式)
+                        先执行循环体，再判断表达式，
+                        如果为true则继续执行，
+                        如果为false则终止循环，
+                        执行完毕继续判断，以此类推
+
+            while 和 do...while 功能类似，
+                do..while可以保证循环体至少执行一次
+                而while不能
+       */
+      var i = 0;
+      do {
+        i++;
+        console.log(i);
+      } while (i < 10);
     </script>
-</body>
+  </body>
 </html>
