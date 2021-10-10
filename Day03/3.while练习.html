@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+            投资年利率为5%，求从1000增长到5000需要花费的时间？
+
+
+        */
+
+      var a = 1000;
+      var b = 0;
+
+      while (a <= 5000) {
+        a *= 1.05;
+        console.log(a);
+        b++;
+        console.log(b);
+      }
+
+      /*
+            成绩，while
+        */
+      var a = false;
+      while (true) {
+        var score = +prompt("输入成绩：");
+        if (res > 100 || res < 0 || isNaN(res)) {
+          a = true;
+          break;
+        } else {
+          a = false;
+          alert("输入有效的分数！");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
