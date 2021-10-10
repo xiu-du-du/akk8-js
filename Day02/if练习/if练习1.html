@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+            从键盘输入小明的期末成绩：
+            当成绩为100时，“奖励一辆BMW”
+            当成绩为80-99时，“奖励一台iphone15s”
+            当成绩为60-80时，“奖励一本参考书”
+            其他时，什么都不奖励
+
+            prompt()    可以弹出一个提示框
+                提示框中会带一个文本框
+                该函数需要一个字符串作为参数
+                该字符串会作为提示框的提示文字
+
+                用户输入的内容会作为函数返回值返回，可以使用变量来接收返回的内容
+        */
+      var res;
+      res = prompt("输入你的成绩：");
+      if (res > 100 || res < 0 || isNaN(res)) {
+        document.write("输入100内的值");
+      } else {
+        if (res == 100) {
+          document.write("奖励一台BMW");
+        } else if (res >= 80) {
+          document.write("奖励一台iphone15s");
+        } else if (res >= 60) {
+          document.write("奖励一本参考书");
+        } else {
+          document.write("什么都没有");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

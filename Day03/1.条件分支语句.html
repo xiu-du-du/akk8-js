@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            条件分支语句也叫switch语句
+
+            语句：
+                switch(条件表达式){
+                    case 表达式：
+                        语句
+                        break
+                    case 表达式：
+                        语句
+                        break
+                    case 表达式：
+                        语句
+                        break
+                    case 表达式：
+                        语句
+                        break
+                    default:
+                        语句
+                        break
+                }
+
+            执行流程：
+                switch...case...语句
+                执行时，会依次将case后的表达式的值和switch后的条件表达式的值进行全等比较，
+                    如果比较的结果为true，则从当前case处执行代码，
+                    如果比较的结果为false，则继续向下比较
+                在case后跟一个break，会变成执行当前语句，不往下执行。
+                default，如果所有结果都为false则会执行default后的语句
+                switch语句和if语句功能实际上有重复的，使用switch可以实现if的功能
+                    同样使用if可以实现switch的功能，根据自己的习惯使用
+        */
+
+      var num = +prompt("输入数字：");
+
+      switch (num) {
+        case 0:
+          console.log("零");
+          break;
+        case 1:
+          console.log("壹");
+          break;
+        case 2:
+          console.log("贰");
+          break;
+        case 3:
+          console.log("叁");
+          break;
+      }
+    </script>
+  </body>
+</html>
