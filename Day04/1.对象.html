@@ -52,6 +52,32 @@
         obj.gender="男"
         obj.age=18
         console.log( obj)
+
+        /*
+            读取对象中的属性
+            如果读取对象中没有的属性，会返回undefined
+        */
+    //    console.log(obj.name)
+    //    console.log(obj.age)
+    //    console.log(obj.gender)
+
+
+       /*
+            修改对象中的属性
+        */
+
+        obj.name="小红"
+        obj.gender="女"
+        console.log( obj)
+        // console.log(obj.name)
+        // console.log(obj.gender)
+
+        /*
+            删除对象中的属性
+                delete 对象.属性名
+        */
+       delete obj.age
+       console.log( obj)
     </script>
 </head>
 <body>
