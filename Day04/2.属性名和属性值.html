@@ -26,12 +26,36 @@
                 在[]中可以直接传递一个变量，这样的变量值是多少就回读取那个属性
        */
         obj['123']=789
-        console.log(obj["123"])
+        var n='123'
+        console.log(obj[n])
+
 
 
         /*
-            
+            属性值
+                js对象的属性值，可以是任意数据类型
+                    甚至也可以是一个对象
         */
+       obj.test='hello'
+       console.log(obj.test)
+
+
+       var obj2=new Object()
+       obj2.name="八戒"
+       obj.test=obj2
+       console.log(obj)
+       console.log(obj["test"])
+
+       /*
+            in 运算符
+                通过该运算符 可以检查一个对象中是否含有指定的属性
+                    如果有则返回true
+                    没有则返回false
+                语法：
+                    “属性名” in 对象
+       */
+      console.log("math" in obj)
+      console.log("name" in obj)
     </script>
 </head>
 <body>
