@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+        测试程序性能
+            程序执行前，开启计时器
+
+        math.sqrt()对一个数开方（根号）
+
+        */
+
+      //使用字符串作为参数，作为计时器的标识
+      console.time("test");
+
+      for (var i = 2; i < 101; i++) {
+        var flag = true;
+        for (var j = 2; j < Math.sqrt(i); j++) {
+          if (i % j == 0) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag) {
+          document.write(i + " 是质数<br>");
+        } else {
+          //   document.write(i + "不是质数<br>");
+        }
+      }
+
+      //终止计时器
+      console.timeEnd("test");
+    </script>
+  </head>
+  <body></body>
+</html>

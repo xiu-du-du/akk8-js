@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+            break 关键字
+                用来退出switch或循环语句
+                不能再if语句中使用break和continue
+                break关键字，会立即终止离他最近的循环语句
+        */
+      for (var i = 0; i < 5; i++) {
+        console.log(i);
+        if (i == 2) {
+          break;
+        }
+      }
+
+
+      /*
+        可以给循环语句创建一个label，标识当前的循环
+
+        label：语句
+        使用break时，可以在break后面跟label名称
+            这样break就会结束指定的label循环语句，而不是最近的循环语句。
+      */
+      outer:
+      for (var i = 0; i < 5; i++) {
+        console.log(i);
+        for (var j = 0; j < 5; j++) {
+          break outer;
+          console.log(j);
+        }
+      }
+
+
+      /*
+        continue关键字
+            用来跳过当次循环
+            和break用法一样，可以用label来标识
+
+
+      */
+     for(var i=0;i<5;i++){
+         if(i==2){
+             continue
+         }
+         console.log(i);
+     }
+    </script>
+  </head>
+  <body></body>
+</html>
