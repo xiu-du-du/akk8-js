@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        /*
+      /*
             js中数据类型
                 - String 字符串
                 - Number 数值
@@ -39,48 +39,45 @@
                     - 开发人员自己创建的对象
         */
 
-        // 创建对象
-        // 构造函数：使用new关键字调用的函数，是构造函数constructor
-        //  构造函数是专门创建对象的函数
-        var obj=new Object();
-        console.log(typeof obj)
+      // 创建对象
+      // 构造函数：使用new关键字调用的函数，是构造函数constructor
+      //  构造函数是专门创建对象的函数
+      var obj = new Object();
+      console.log(typeof obj);
 
-        // 向对象中添加属性
-        // 语法： 对象.属性名=属性值;
-        // 给obj添加一个name属性
-        obj.name="张三"
-        obj.gender="男"
-        obj.age=18
-        console.log( obj)
+      // 向对象中添加属性
+      // 语法： 对象.属性名=属性值;
+      // 给obj添加一个name属性
+      obj.name = "张三";
+      obj.gender = "男";
+      obj.age = 18;
+      console.log(obj);
 
-        /*
+      /*
             读取对象中的属性
             如果读取对象中没有的属性，会返回undefined
         */
-    //    console.log(obj.name)
-    //    console.log(obj.age)
-    //    console.log(obj.gender)
+      //    console.log(obj.name)
+      //    console.log(obj.age)
+      //    console.log(obj.gender)
 
-
-       /*
+      /*
             修改对象中的属性
         */
 
-        obj.name="小红"
-        obj.gender="女"
-        console.log( obj)
-        // console.log(obj.name)
-        // console.log(obj.gender)
+      obj.name = "小红";
+      obj.gender = "女";
+      console.log(obj);
+      // console.log(obj.name)
+      // console.log(obj.gender)
 
-        /*
+      /*
             删除对象中的属性
                 delete 对象.属性名
         */
-       delete obj.age
-       console.log( obj)
+      delete obj.age;
+      console.log(obj);
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

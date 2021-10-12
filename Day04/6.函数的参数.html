@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            函数的参数
+            
+            定义一个用来求两个数和的函数
+                可以在函数的()中指定一个或多个形参
+                多个形参之间使用逗号隔开
+                声明形参就相当于在函数内部声明了对应的变量
+        */
+       function sum(a,b){
+           console.log(a+b);
+       }
+    //    sum(3,10)
+
+    /*
+        调用函数时，解析器不会检查实参的类型
+            所以可能会接收到非法参数
+            如果接受到了非法参数，则要进行类型的检查
+        函数的实参可以是任意类型
+    */
+    //    sum(true,false)
+
+    /*
+       调用函数时，解析器也不会检查实参的数量
+            多余的实参不会被赋值
+        如果实参的数量小于形参的数量，没有对应实参的形参将时undefined
+    */
+//    sum(123,123,"hello")
+       sum(123)//a=123 b=undefined a+b=NaN
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
