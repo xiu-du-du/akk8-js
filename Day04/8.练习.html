@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        /*
+              判断一个数字是否是偶数，如果是返回true，否则返回false
+          */
+
+        function isOu(num) {
+            return num % 2 == 0;
+        }
+        var result = isOu(40);
+        console.log(result);
+
+        /*
+              根据半径计算圆的面积
+          */
+        function mianji(r) {
+            return 3.14 * r * r;
+        }
+        result = mianji(10);
+        console.log(result);
+
+        /*
+              创建一个函数，可以在控制台中输出一个人的信息
+                  输出人的name age gender address
+                  
+  
+              实参可以是任意数字类型，也可以是对象
+              当参数过多时，可以将参数封装到一个对象中，通过对象传递
+         */
+        function sayHello(o) {
+            console.log(
+                "我是" +
+                o.name +
+                "，今年" +
+                o.age +
+                "，我是个" +
+                o.gender +
+                "人，我住在" +
+                o.address +
+                "。"
+            );
+        }
+        //    sayHello("张三",18,"男","监狱")
+        // 创建对象
+        var obj = {
+            name: "孙悟空",
+            age: 16,
+            gender: "男",
+            address: "花果山",
+        };
+        // sayHello(obj)
+
+        /*
+          实参可以使一个对象，也可以是一个函数
+      */
+        function fun(a) {
+            console.log(a);
+            a(obj);
+        }
+        fun(sayHello);
+      /*
+          sayHello
+              函数对象
+              相当于直接使用函数对象
+          sayHello()
+              调用函数
+              相当于使用的函数返回值
+     */
+    </script>
+</head>
+
+<body></body>
+
+</html>
