@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function fun() {
+            for (var i = 0; i < 5; i++) {
+                if (i == 2) {
+                    // 退出当前循环
+                    // continue
+
+                    //退出整个循环
+                    // break
+
+                    //结束整个函数
+                    return
+                }
+                console.log(i)
+            }
+        }
+
+
+
+        /*
+            返回值可以使任意数据类型
+                也可以是一个对象
+        */
+
+        function fun2() {
+            // var obj={name:"tom"}
+            // return obj
+            return { name: "tom" }
+        }
+        // var a=fun2()
+        // console.log(a)
+
+
+
+        function fun3() {
+            function fun4() {
+                console.log("我是fun4")
+            }
+            //将 fun4函数对象 作为返回值返回
+            return fun4
+        }
+        var a = fun3()
+        console.log(a)
+        // a();
+        fun3()()
+    </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
