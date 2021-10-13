@@ -21,14 +21,16 @@
            this.name=name
            this.age=age
            this.gender=gender
-           this.sayName=fun
        }
        //将sayName方法在全局中定义
        /*
             将函数定义在全局作用域中，会污染全局作用域的命名空间
                 而且定义在全局作用域中也非常不安全
        */
-       function fun(){
+    //    function fun(){
+    //            alert("hello "+this.name)
+    //        }
+    Person.prototype.sayName=function fun(){
                alert("hello "+this.name)
            }
 
@@ -37,7 +39,7 @@
        var per2=new Person("猪八戒",13,"男")
        console.log(per)
        console.log(per2)
-       per.sayName()
+       per2.sayName()
     </script>
 </head>
 <body>
