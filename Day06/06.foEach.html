@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            一般使用for遍历数据
+            js中还有一个方法，可以用来遍历数据
+            forEach()
+                这个方法只支持ie8以上的浏览器
+        */
+       var arr=["red","blue","orange","pink"]
+       function fun(){
+
+       }
+       /*
+            forEach()需要一个函数作为参数
+                ie8以下浏览器不支持，如果要兼容ie8，则不要使用forEach。
+                
+                这种函数由我们创建不由我们调用，称为回调函数
+                数组中有几个元素，函数就回执行几次
+                    每次执行时，浏览器会将遍历到的元素以实参的形式传递进来，可以定义形参来读取这个内容
+                浏览器会在回调函数中传递三个参数：
+                    1、当前正在遍历的元素
+                    2、当前正在遍历到元素的索引
+                    3、正在遍历的数组
+       */
+       arr.forEach(function(value,index,obj){
+            console.log(value)            
+       })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
