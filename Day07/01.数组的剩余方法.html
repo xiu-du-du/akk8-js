@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            concat()
+                可以连接两个或多个数组，并将新的数组返回
+                该方法不会对原数组产生影响
+        */
+        var arr=["tom","jim","wim"]
+        var arr2=["red",'blue','orange']
+        var res=arr.concat(arr2)
+        console.log(res)
+        console.log(typeof res)
+        /*
+            join()
+                该方法可以将数组转换成一个字符串
+                该方法不会对原数组产生影响，而是将转换后的字符串作为结果返回
+                在join()中可以指定一个字符串作为参数，这个字符串会成为数组中元素的连接符
+        */
+       res=arr.join("|")
+       console.log(res)
+       console.log(typeof res)
+
+       /*
+            reverse()
+                该方法用来反转数组(反向输出数组内容)
+                该方法会直接修改原数组
+       */
+      arr.reverse()
+      console.log(arr)
+
+      /*
+            sort()
+                可以用来对数组进行排序
+                也会影响原数组，默认按照Unicode编码进行排序
+                对数字进行排序时，会得到错误的结果
+                可以自己来指定排序规则
+                    可以再sort中添加一个回调函数，来制定排序规则
+                        回调函数中需要定义两个形参，
+                        浏览器会分别使用数组中的元素作为实参去调用回调函数
+      */
+     arr.sort()
+     console.log(arr)
+     var arr2=[1,2,4,11,7,4,6]
+     arr2.sort(function(a,b){
+         //升序
+        return a-b
+        //降序
+        // return b-a
+     })
+     console.log(arr2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
