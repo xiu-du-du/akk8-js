@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            检查字符串是否含有aaa
+
+            量词
+                - 设置内容出现次数
+                - {n} 内容出现n次
+                - {m,n} 内容出现m-n次的范围
+                - {m,} 内容出现m次或m次以上
+                - + 至少出现一次
+                - * 出现0次或多个，相当于{0,}
+                - ? 出现0个或1个，相当于{0,1}
+
+
+        */
+       
+        var reg=/a?/
+        console.log(reg.test("bbb"))
+        var reg=/a*/
+        console.log(reg.test("bbb"))
+        var reg=/a+/
+        console.log(reg.test("bbb"))
+
+        var reg=/a{3,}/;
+        console.log(reg.test("abaaac"))
+
+        var reg=/(ab){3}/;
+        console.log(reg.test("abgbbbgabaabc"))
+
+        var reg=/ab{1,3}c/;
+        console.log(reg.test("abgbbbbgabaabscc"))
+
+
+        /*
+            字符串以a开头
+            ^ 表示开头
+            $ 表示结尾
+            如果同时使用^ 和 $ ，字符串必须完全符合正则表达式，
+                即代表 字符串必须即是开头又是结尾
+        */
+
+        reg=/^a/
+        console.log(reg.test("aacca"))
+        reg=/a$/
+        console.log(reg.test("aacca"))
+        reg=/^a$/
+        console.log(reg.test("a"))
+        
+
+        /*
+            检查一个手机号
+        */
+        var phoneStr="13597844621"
+        reg=/^1[3-9][0-9]{9}$/
+        console.log(reg.test(phoneStr))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
