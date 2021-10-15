@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            字符串是否含有 .
+            . 表示任意字符
+            \. 表示只找 .
+            \\ 表示只找\
+            \d 表示任意数字，相当于[0-9]
+            \w 表示任意字母、数字、下划线
+            \s 表示空格
+            \b 表示单词边界
+            \D 和\d相反
+            \W 和\w相反
+            \S 和\s相反
+            \B 和\b相反
+        */
+        var reg=/\./
+        console.log(reg.test("15612"))
+        var reg=/\bchild\b/
+        console.log(reg.test("hello children"))
+        
+
+        // 接受用户的输入
+        var str=prompt("输入用户名")
+        console.log(str.replace(/^\s+|\s+$/gi,""))
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
