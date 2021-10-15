@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str="1a2b3c4d5e"
+        /*
+            split()
+                - 将一个字符串拆分成一个数组
+                - 可以根据正则去拆分
+        */
+        console.log(str.split(/[a-z]/))
+
+        /*
+            search()
+                - 搜索字符串中是否含有指定内容
+                - 搜索到就返回第一次出现的元素索引，没找到就返回-1
+                - 可以接受一个正则作为参数，根据正则去搜索
+                - 只会查找第一个，设置全局匹配也没用
+        */
+
+        str="hello a2c hello adc"
+        console.log(str.search("abc"))
+        console.log(str.search(/a[a-z]c/))
+
+
+        /*
+            match()
+                - 根据正则从字符串中提取符合条件的内容
+                - 默认情况只会找第一个符合条件的内容，想继续找必须设置正则表达式全局匹配
+                - 返回结果是一个数组
+
+
+                可以给一个真这个表达式设置多个匹配模式，顺序无所谓
+        */
+
+        str="1a2b3c4d5e6fA5A9B9"
+        console.log(str.match(/[a-z]/gi))
+
+        /*
+            replace()
+                - 替换字符串中的内容
+                - 两个参数：
+                    1、被替换的那日
+                    2、新的内容
+        */
+
+        console.log(str.replace(/a/gi,"@"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
