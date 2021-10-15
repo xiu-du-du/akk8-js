@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            使用字面量创建正则表达式
+                语法
+                    var 变量= /正则表达式/匹配模式
+
+                使用|表示或的意思
+        */
+    //    var reg=/a|c/i
+    //表示匹配任意字母
+       var reg=/[a-z]/i
+       console.log(reg.test("Avbs"))
+
+    //检查一个字符串中是否含有abc或abd或aec
+        var reg=/a[a-z]c/i
+        console.log(reg.test("awc"))
+
+    //检查一个字符串中除了a-z以外的元素 
+        var reg=/a[^a-z]c/i
+        console.log(reg.test("a3c"))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
