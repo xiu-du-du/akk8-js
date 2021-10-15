@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var str = "Hello World"
+
+        //console.log(str.lenth)
+        console.log(str[6])
+
+        //获取指定位置的字符
+        var result = str.charAt(6)
+        console.log(result)
+        //获取指定位置字符的编码
+        var result = str.charCodeAt(6)
+        console.log(result)
+
+        //根据字符编码来获取字符
+        result=String.fromCharCode(2677)
+        console.log(result)
+
+        //用来连接两个或多个字符串
+        result=str.concat("123456")
+        console.log(result)
+
+        //检索一个字符串中是否含有指定内容,有就返回索引,没有就返回-1
+        //第一个参数是要查找的元素，第二个参数是开始查找的位置
+        result=str.indexOf("e")
+        console.log(result)
+
+        //和indexof一样，但查找顺序是从后往前找，也可以指定第二个参数
+        result=str.lastIndexOf("d")
+        console.log(result)
+
+        //截取字符串，第一个参数是开始位置索引，第二个参数是结束位置的索引，如果是负数就是从后往前计算
+        result=str.slice(4)
+        console.log(result)
+        result=str.slice(4,8)
+        console.log(result)
+
+        //截取一个字符串，和slice类似
+        /*
+            第一个参数是开始位置索引
+            第二个参数是结束为止索引
+            和slice()不同的是，substring()不能接收负值，
+                如果传递的是负数，则默认使用0
+            会自动调整参数位置，如果第二个参数小于第一个，则自动交换。
+        */
+        result=str.substring(1,4)
+        console.log(result)
+
+        //截取字符串
+        //第一个参数是开始位置的索引，第二个是截取的长度
+        str="abcdefg"
+        res=str.substr(3,4)
+        console.log(res)
+
+        //拆分字符串，返回数组
+        //根据传递的字符串参数去拆分
+        //如果传递的参数为空的字符串，则会拆分数组中的每个元素
+        str="abc,cde,wea,qwe"
+        res=str.split(",")
+        console.log(res)
+
+        //字符串转换成大写
+        res=str.toUpperCase()
+        console.log(res)
+
+        //字符串转换成小写
+        var res2=res.toLowerCase()
+        console.log(res2)
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
