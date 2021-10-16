@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+
+        在事件对应的属性中设置js代码，
+            当事件被触发时，这些代码会执行。
+        
+     -->
+    <!-- <button ondblclick="alert('hello')">按钮</button> -->
+    <button id="btn">按钮</button>
+    <script>
+        /*
+            事件，用户和浏览器的交互行为。
+            例如：
+                点击按钮、鼠标移动、关闭窗口...
+        */
+
+        /*
+            给按钮的对应事件绑定处理函数的形式来响应事件
+        */
+        //获取按钮对象
+        var btn = document.getElementById("btn")
+        //绑定单击事件
+        //这种为单击事件绑定的函数，称为单击响应函数
+        btn.onclick = function () {
+            alert("你点击了一下")
+        }
+
+    </script>
+</body>
+
+</html>
