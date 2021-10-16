@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        window.onload = function () {
+            var btn01 = document.getElementById('btn01')
+            btn01.onclick = function () {
+                var bj = document.getElementById('bj')
+                alert(bj.innerHTML)
+            }
+
+            var btn02 = document.getElementById('btn02')
+            btn02.onclick = function () {
+                var lis = document.getElementsByTagName('li')
+                for (var i = 0; i < lis.length; i++) {
+                    alert(lis[i].innerHTML)
+                }
+            }
+
+
+            var btn03 = document.getElementById('btn03')
+            btn03.onclick = function () {
+                var inputs = document.getElementsByName('gender')
+                for (var i = 0; i < inputs.length; i++) {
+                    //innerHTML 用于获取元素内部的代码 ， 对于字结束标签input没有意义
+                    /*
+                        读取元素节点属性直接使用 元素.属性名
+                        注意：
+                            class属性不能用这种方式读取
+                            读取class属性时，需要使用className
+                    */
+                    alert(inputs[i].value)
+                    // alert(inputs[i].className)
+                }
+            }
+
+
+            var btn04 = document.getElementById('btn04')
+            btn04.onclick = function () {
+                var clis = document.getElementById('city').getElementsByTagName('li')
+                for(var i=0;i<clis.length;i++){
+                    alert(clis[i].innerHTML)
+                }
+            }
+
+
+
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="total">
+            <div class="inner clearfix">
+                <p>你喜欢哪个城市？</p>
+                <ul id="city">
+                    <li id="bj">北京</li>
+                    <li>上海</li>
+                    <li>东京</li>
+                    <li>首尔</li>
+                </ul>
+                <br>
+                <br>
+                <p>你喜欢哪个游戏？</p>
+                <ul id="game">
+                    <li id="rl">红警</li>
+                    <li>实况</li>
+                    <li>极品飞车</li>
+                    <li>魔兽</li>
+                </ul>
+                <br>
+                <br>
+                <p>你手机是什么系统？</p>
+                <ul id="phone">
+                    <li>IOS</li>
+                    <li id="android">Android</li>
+                    <li>Windows Phone</li>
+                </ul>
+            </div>
+            <div class="inner clearfix">
+                gender:
+                <input type="radio" name="gender" value="male">
+                Male
+                <input type="radio" name="gender" value="female">
+                Female
+                <br>
+                <br>
+                name:
+                <input type="text" name="name" id="username" value="abcde">
+            </div>
+        </div>
+        <div id="btnList">
+            <div><button id="btn01">查找#bj节点</button></div>
+            <div><button id="btn02">查找所有li节点</button></div>
+            <div><button id="btn03">查找name=gender的所有节点</button></div>
+            <div><button id="btn04">查找#city下所有的li节点</button></div>
+            <div><button id="btn05">查找#city下所有的子节点</button></div>
+            <div><button id="btn06">查找#phone的第一个子节点</button></div>
+            <div><button id="btn07">查找#bj的父节点</button></div>
+            <div><button id="btn08">查找#android的前一个兄弟节点</button></div>
+            <div><button id="btn09">查找#username的value属性值</button></div>
+            <div><button id="btn10">查找#username的value属性值</button></div>
+            <div><button id="btn11">返回#bj的文本值</button></div>
+        </div>
+    </div>
+</body>
+
+</html>
