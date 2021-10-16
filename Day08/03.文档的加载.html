@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        
+            浏览器加载页面是从上到下顺序加载的
+                读取到一行就运行一行
+                如果顺序不对，会出现在代码执行时，页面还没加载
+            
+            onload事件会在页面加载完成后触发
+            为window绑定onload事件
+                该事件对应的响应函数会在页面加载完成后执行
+                这样可以确保代码执行时，DOM对象已经加载完毕了
+        */
+        window.onload = function () {
+            var btn = document.getElementById("btn")
+            btn.onclick = function () {
+                alert("hello")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+</body>
+
+</html>
