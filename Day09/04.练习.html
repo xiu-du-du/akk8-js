@@ -24,6 +24,10 @@
                 if (info.scrollHeight-info.scrollTop===info.clientHeight){
                     inputs[0].disabled=false
                     inputs[1].disabled=false
+                }else{
+                    inputs[0].disabled=true
+                    inputs[0].checked=false
+                    inputs[1].disabled=true
                 }
             }
         }
