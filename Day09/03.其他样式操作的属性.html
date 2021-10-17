@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +10,33 @@
             width: 100px;
             height: 100px;
             background-color: red;
-            border: 10px solid blue;
+            padding: 10px;
+            border: 10px solid yellow;
         }
+
+
         #box2{
-            padding:50px 100px;
+            padding: 100px;
             background-color: #bfa;
+        }
+
+        #box4{
+            width: 200px;
+            height: 300px;
+            background-color: #bfa;
+            overflow: auto;
+        }
+
+        #box5{
+            width: 450px;
+            height: 600px;
+            background-color: yellow;
         }
     </style>
     <script>
         window.onload=function(){
             var box1=document.getElementById("box1")
+            var box4=document.getElementById("box4")
             var btn=document.getElementsByTagName("button")[0]
             btn.onclick=function(){
                 //内容区
@@ -37,7 +54,19 @@
                 // alert(box1.offsetLeft)
                 // alert(box1.offsetTop)
 
-                
+                //获取元素滚动区域
+                // alert(box4.scrollHeight)
+                // alert(box4.scrollWidth)
+
+                //获取滚动条移动过的距离
+                // alert(box4.scrollLeft)
+                // alert(box4.scrollTop)
+
+                //当满足scrollHeight - scrollTop == clientHeight,说明滚动条滚到底部了
+                //可以使用这个特性，来做滚动条的判断
+                alert(box4.scrollHeight-box4.scrollTop)
+                alert(box4.clientHeight)
+
 
 
             }
@@ -48,8 +77,18 @@
     <button id="btn01">按钮</button>
     <br>
     <br>
-    <div id="box2" style="position: relative;">
-        <div id="box1"></div>
+
+    <div id="box4">
+        <div id="box5">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="box3">
+        <div id="box2" style="position: relative;">
+            <div id="box1"></div>
+        </div>
     </div>
 </body>
 </html>
