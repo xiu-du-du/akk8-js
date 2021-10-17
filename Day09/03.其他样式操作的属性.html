@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 10px solid blue;
+        }
+        #box2{
+            padding:50px 100px;
+            background-color: #bfa;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var box1=document.getElementById("box1")
+            var btn=document.getElementsByTagName("button")[0]
+            btn.onclick=function(){
+                //内容区
+                // alert(box1.clientHeight)
+                // alert(box1.clientWidth)
+
+                //可见区
+                // alert(box1.offsetHeight)
+                // alert(box1.offsetWidth)
+
+                //获取离当前元素最近开启了定位的祖先元素
+                // alert(box1.offsetParent.id)
+
+                //距离父元素的偏移量
+                // alert(box1.offsetLeft)
+                // alert(box1.offsetTop)
+
+                
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <button>按钮</button>
+    <br>
+    <br>
+    <div id="box2" style="position: relative;">
+        <div id="box1"></div>
+    </div>
+</body>
+</html>
