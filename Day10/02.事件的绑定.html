@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function (){
+            var btn01=document.getElementById("btn01")
+
+            /*
+            *   使用addEventListener可以给元素绑定多个相同或不同的响应函数
+            *
+            */
+            btn01.addEventListener("click",function (){
+                alert("1")
+            },false)
+
+            btn01.addEventListener("click",function (){
+                alert("2")
+            },false)
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <button id="btn01">按钮</button>
+</body>
+</html>
